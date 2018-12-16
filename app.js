@@ -29,7 +29,7 @@ app.post("/donate_post", urlencodedParser, function (req, res) {
     const Candate1=req.body.Candate1;
     const Candate2=req.body.Candate2;
     res.send(`
-      Hello, ${firstName} ${phone} ${YN} ${email} ${resource}  ${pro}  ${limit} ${Candate1} ${Candate}
+      Hello, ${firstName} ${phone} ${YN} ${email} ${resource}  ${pro} ${source} ${limit} ${Candate1} ${Candate2}
     `);
     
 });
