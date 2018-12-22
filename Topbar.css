@@ -1,0 +1,19 @@
+.container.custom-container-width {
+    max-width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 100%;
+  }
+
+  .navbar-nav.custom-navbar-nav > li{ 
+    padding-left:50px; 
+    padding-right:50px; } 
+  
+  .navbar.custom-navbar {
+    /* margin-left: -20px;
+    margin-right: -20px; */
+    background:rgba(40,167,69,0.9);
+  }
+  

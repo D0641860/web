@@ -2,161 +2,239 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-    <title>
-        捐贈者表單
-    </title>
-
+    <title>Web</title>
+    <link rel="stylesheet" type="text/css" href="/public/Topbar.css">;
     <style>
-        #map {
-            height: 250px;
-        }
+        /* #map {
+        height: 250px;
+    } */
+    body{
+        background-color:linen;
+        font-weight:bold;
+        font-style:oblique;
+        font-size:18px;
+        
+    }
     </style>
-
-
 </head>
+
 <br>
 <br>
 <br>
 
 <body>
-    <form action="http://localhost:3000/donate_post" method="POST">
-        <div class="row" style="text-align:center">
+    <nav class="navbar custom-navbar navbar-expand-sm  navbar-dark justify-content-center fixed-top">
 
-            <div class="col-md-12 col-xs-12 ">
-                <a>
-                    <p> &emsp;姓名 : &emsp;
-                        <input type="text" name="姓名" style="width:10%" value="" required>
-                    </p>
-                </a>
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
+            <ul class="navbar-nav custom-navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" width="50" onclick="jumphome()">首頁</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="jumpcomment()">留言板</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="#" onclick="jumplist()">物品清單</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#" onclick="jumpdonate()">捐獻物資</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="jumpaboutus()">關於我們</a>
+                </li>
+            </ul>
+        </div>
+        <script>
+            function jumphome()
+            {
+                window.location.href='home.html';
+            }
+            function jumpcomment()
+            {
+                window.location.href='comment.html';
+            }
+            function jumplist()
+            {
+                window.location.href='list.html';
+            }
+            function jumpdonate()
+            {
+                window.location.href='donate.html';
+            }
+            function jumpaboutus()
+            {
+                window.location.href='aboutus.html';
+            }
+        </script>
+    </nav>
+    <div class="row" id="Top">
+        <div class="container custom-container-width" style="margin-top:10px">
+            <div class="col-xs-12 col-sm-12 col-md-12 ">
+                <p>&nbsp;&nbsp;<img src="/public/logo.png" alt="Logo" height="98" width="122"></p>
             </div>
-            <div class="col-md-12 col-xs-12 ">
-                <a>
-                    <p> &emsp;是否在清單留下姓名&emsp;
-                        <input type="radio" name="是否留名" value="Yes" style='width:4%' required>是</option>
-                        <input type="radio" name="是否留名" value="No" style='width:4%' required>否</option>
-                    </p>
-                </a>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 ">
+            <div class="container custom-container-width ">
+                <div class="col-xs-12 col-sm-12 col-md-12 bg-success">
+                </div>
             </div>
-            <div class="col-md-12 col-xs-12 ">
-                <a>
-                    <p> &emsp;電話 :&emsp;
-                        <input type="text" name="電話" id="phone" style="width:10%" value="" required>
-                    </p>
-                </a>
-            </div>
-            <br>
+        </div>
+        <br>
+        <form action="http://localhost:3000/donate_post" method="POST">
+            <div class="row" style="text-align:center">
+                <div class="container custom-container-width ">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <a>
+                            <p> &emsp;姓名&emsp;&emsp;: &emsp;
+                                <input type="text" name="姓名" style="width:150px" value="" required>
+                            </p>
+                        </a>
+                    </div>
+                </div>
+                <br><br>
+                <div class="container custom-container-width ">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <a>
+                            <p>&emsp;是否在清單留名&emsp;&emsp;:&emsp;
+                                <input type="radio" name="是否留名" value="Yes" style='width:10%' required>是</option>
+                                <input type="radio" name="是否留名" value="No" style='width:10%' required>否</option>
+                            </p>
+                        </a>
+                    </div>
+                </div>
+                <br><br>
+                <div class="container custom-container-width ">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <a>
+                            <p> &emsp;電話&emsp;&emsp;:&emsp;
+                                <input type="text" name="電話" id="phone" style="width:150px" value="" required>
+                            </p>
+                        </a>
+                    </div>
+                </div>
+                <br><br>
+                <div class="container custom-container-width ">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <a>
+                            <p> &emsp;信箱&emsp;&emsp;: &emsp;
+                                <input type="email" name="信箱" id="Email" style="width:150px" value="" required>
+                            </p>
+                        </a>
+                    </div>
+                </div>
+                <br><br>
+                <div class="container custom-container-width ">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <a>
+                            <p> &emsp;捐贈選擇&emsp;&emsp;:&emsp;
+                                <input type='radio' name="捐贈物資" value="人力" id="myradio" style='width:10%' onclick="form1.style.display='';form2.style.display='none';">人力
+                                <input type='radio' name="捐贈物資" value="物資" id="myradio" style='width:10%' onclick="form1.style.display='none';form2.style.display='';form3.style.display='none';form4.style.display='none';">物資
+                            </p>
+                        </a>
+                    </div>
+                </div>
+                <br> <br>
+                <div class="container custom-container-width ">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id=form1 style="display:none">
+                        <p> &emsp;職業選擇&emsp;&emsp;:&emsp;
+                            <input type='radio' name="職業" value="專業人員" style='width:10%' onclick="form3.style.display='';form4.style.display='';">專業人員
+                            <input type='radio' name="職業" value="志工" style='width:10%' onclick="form3.style.display='none';form4.style.display='';">志工
+                        </p>
+                    </div>
+                </div>
 
-            <div class="col-md-12 col-xs-12 ">
-                <a>
-                    <p> &emsp;信箱 : &emsp;
-                        <input type="email" name="信箱" id="Email" style="width:10%" value="" required>
-                    </p>
-                </a>
-            </div>
+                <div class="container custom-container-width ">
 
-            <div class="col-md-12 col-xs-12 ">
-                <a>
-                    <p> &emsp;捐贈物資選擇:&emsp;
-                        <input type='radio' name="捐贈物資" value="人力" id="myradio" style='width:7%' onclick="form1.style.display='';form2.style.display='none';">人力
-                        <input type='radio' name="捐贈物資" value="物資" id="myradio" style='width:7%' onclick="form1.style.display='none';form2.style.display='';form3.style.display='none';form4.style.display='none';">物資
-                    </p>
-                </a>
-            </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id=form2 style="display:none">
 
-            <br>
-            <br>
-            <div class="col-md-12 col-xs-12 " id=form1 style="display:none">
-                <p> &emsp;職業選擇:&emsp;
-                    <input type='radio' name="職業" value="專業人員" style='width:7%' onclick="form3.style.display='';form4.style.display='';">專業人員
-                    <input type='radio' name="職業" value="志工" style='width:7%' onclick="form3.style.display='none';form4.style.display='';">志工
-                </p>
-            </div>
+                        <p>捐贈物資&emsp;&emsp;:&nbsp;&nbsp;
+                            <input type="text" id="source" name="物資" style="width:150px" value="">
 
-            <div class="col-md-12 col-xs-12 " id=form2 style="display:none">
+                        </p>
+                        &emsp;物資相關圖片:&emsp;
+                        <action="/somewhere/to/upload" enctype="multipart/form-data">
+                            <input type="file" onchange="readURL(this)" name="物資相關圖片" data-url="/upload" accept="image/gif, image/jpeg, image/png">
+                            <br>
+                            <img id="物資相關圖片" src="#" style="width:10%">
 
-                <p>捐贈物資:&nbsp;&nbsp;
-                    <input type="text" id="source" name="物資" style="width:10%" value="">
-                </p>
 
-                &emsp;&emsp;&emsp;&emsp;物資相關圖片:&emsp;
-                <action="/somewhere/to/upload" enctype="multipart/form-data">
-                    <input type="file" onchange="readURL(this)" name="物資相關圖片" data-url="/upload" accept="image/gif, image/jpeg, image/png">
-                    <br>
-                    <img  id="物資相關圖片" src="#"  style="width:25%">
+                            <script type="text/javascript">
+                                function readURL(input) {
+                                    if (input.files && input.files[0]) {
+                                        var imageTagID = input.getAttribute("name");
+                                        var reader = new FileReader();
+                                        reader.onload = function (e) {
+                                            var img = document.getElementById(imageTagID);
+                                            img.setAttribute("src", e.target.result)
+                                        }
 
-                    <script type="text/javascript">
-                        function readURL(input) {
-                            if (input.files && input.files[0]) {
-                                var imageTagID = input.getAttribute("name");
-                                var reader = new FileReader();
-                                reader.onload = function (e) {
-                                    var img = document.getElementById(imageTagID);
-                                    img.setAttribute("src", e.target.result)
+                                        reader.readAsDataURL(input.files[0]);
+                                    }
                                 }
-
-                                reader.readAsDataURL(input.files[0]);
-                            }
-                        }
-                    </script>
-                    <br>
-                    <p> &emsp;是否有時效性:&emsp;
-                        <input type='radio' name="時效性" value="yes" style='width:7%'>是
-                        <input type='radio' name="時效性" value="no" style='width:7%'>否
-                    </p>
+                            </script>
+                            <br>
+                            <p> &emsp;是否有時效性:&emsp;
+                                <input type='radio' name="時效性" value="yes" style='width:10%'>是
+                                <input type='radio' name="時效性" value="no" style='width:10%'>否
+                            </p>
 
 
-            </div>
+                    </div>
+                </div>
+                <div class="container custom-container-width ">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id=form3 style="display:none">
+                        <br>
+                        &emsp;身分證明&emsp;&emsp;:&emsp;&emsp;
+                        <action="/somewhere/to/upload" enctype="multipart/form-data">
+                            <input type="file" onchange="readURL(this)" name="職業相關證明" id="upload" accept="image/gif, image/jpeg, image/png">
+                           
+                            <img id="職業相關證明" src="#" style="width:25%">
 
-            <div class="col-md-12 col-xs-12 " id=form3 style="display:none">
-                <br>
+                            <script type="text/javascript">
+                                function readURL(input) {
+                                    if (input.files && input.files[0]) {
+                                        var imageproID = input.getAttribute("name");
+                                        var proreader = new FileReader();
+                                        proreader.onload = function (e) {
+                                            var img = document.getElementById(imageproID);
+                                            img.setAttribute("src", e.target.result)
+                                        }
 
-                &emsp;身分證明:&emsp;
-                <action="/somewhere/to/upload" enctype="multipart/form-data">
-                    <input type="file" onchange="readURL(this)" name="職業相關證明" id="upload" accept="image/gif, image/jpeg, image/png">
-                    <br>
-                    <img  id="職業相關證明" src="#" style="width:25%">
-
-                    <script type="text/javascript">
-                        function readURL(input) {
-                            if (input.files && input.files[0]) {
-                                var imageproID = input.getAttribute("name");
-                                var proreader = new FileReader();
-                                proreader.onload = function (e) {
-                                    var img = document.getElementById(imageproID);
-                                    img.setAttribute("src", e.target.result)
+                                        proreader.readAsDataURL(input.files[0]);
+                                    }
                                 }
+                            </script>
 
-                                proreader.readAsDataURL(input.files[0]);
-                            }
-                        }
-                    </script>
+                    </div>
+                </div>
+                <div class="container custom-container-width ">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id=form4 style="display:none">
+                        <br>
+                        日期&emsp;&emsp;: &emsp;
+                        <input type='date' name="開始日期" value="" style='width:150px'> &nbsp;——&nbsp;
+                        <input type='date' name="結束日期" value="" style='width:150px'>
+                        <br>
+                        <br> 地點&emsp;&emsp;:
+                        <input type="checkbox" name="地點" value="南投" style='width:10%'>南投</option>
+                        <input type="checkbox" name="地點" value="花蓮" style='width:10%'>花蓮</option>
+                        <input type="checkbox" name="地點" value="台東" style='width:10%'>台東</option>
+                        <input type="checkbox" name="地點" value="高雄" style='width:10%'>高雄</option>
+                        <input type="checkbox" name="地點" value="屏東" style='width:10%'>屏東</option>
+                        <br>
+                        <br>
 
-            </div>
-
-            <div class="col-md-12 col-xs-12 " id=form4 style="display:none">
-                <br>
-
-
-                日期: &emsp;
-                <input type='date' name="開始日期" value="" style='width:15%'> &nbsp;~&emsp;
-                <input type='date' name="結束日期" value="" style='width:15%'>
-                <br>
-                <br> 地點: &emsp;
-                <input type="checkbox" name="地點" value="Taipei" style='width:4%'>台北</option>
-                <input type="checkbox" name="地點" value="Taichung" style='width:4%'>台中</option>
-                <input type="checkbox" name="地點" value="Fcu" style='width:4%'>逢甲</option>
-                <input type="checkbox" name="地點" value="Kaoshuing" style='width:4%'>高雄</option>
-                if()
-                <br>
-                <br>
-
-                <!-- <div class="container">
+                        <!-- <div class="container">
                     <div id="map"></div>
                 </div>
                 <script>
@@ -210,15 +288,18 @@
                 </script> -->
 
 
+                    </div>
+                </div>
+                <div class="container custom-container-width ">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+                        <input type="submit" value="提交" style=background-color:lightseagreen id="submit">
+
+                    </div>
+                </div>
             </div>
-            <div class="col-md-12 col-xs-12 ">
 
-                <input type="submit" value="提交" style=background-color:lightseagreen id="submit">
-
-            </div>
-        </div>
-
-    </form>
+        </form>
 </body>
 
 </html>
