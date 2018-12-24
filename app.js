@@ -28,6 +28,9 @@ app.get("/donate.html", function (req, res) {
 app.get("/aboutus.html", function (req, res) {
     res.sendFile(__dirname + "/" + "aboutus.html");
 });
+app.get("/requester.html", function (req, res) {
+    res.sendFile(__dirname + "/" + "requester.html");
+});
 app.get("/donate_post", function (req, res) {
     res.send("網頁逾時");
 });
