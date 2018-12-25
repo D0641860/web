@@ -6,10 +6,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Charm|Gochi+Hand|Noto+Sans+TC" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Gochi+Hand|Noto+Sans+TC" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Charm" rel="stylesheet">
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
   <title>Web</title>
   <link rel="stylesheet" type="text/css" href="/public/Topbar.css">;
+  <style>
+    #bg-img {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      z-index: -99;
+    }
+
+    h1.about {
+      font-size: 60px;
+      font-family: 'Charm', cursive;
+    }
+
+    p {
+      font-family: 'Noto Sans TC', sans-serif;
+    }
+
+    h2 {
+      font-family: 'Charm', cursive;
+    }
+  </style>
 
 </head>
 
@@ -37,7 +63,7 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#" onclick="jumprequester()">申請物資</a>
-      </li>
+        </li>
         <li class="nav-item active">
           <a class="nav-link" href="#" onclick="jumpaboutus()">關於我們</a>
         </li>
@@ -56,9 +82,8 @@
       function jumpdonate() {
         window.location.href = 'donate.html';
       }
-      function jumprequester()
-      {
-        window.location.href='requester.html';
+      function jumprequester() {
+        window.location.href = 'requester.html';
       }
       function jumpaboutus() {
         window.location.href = 'aboutus.html';
@@ -69,46 +94,100 @@
 
 
   <div class="row" id="Top">
-    <div class="container custom-container-width" style="margin-top:50px">
+    
+    <!-- <div class="container custom-container-width" style="margin-top:50px">
       <div class="col-xs-12 col-sm-12 col-md-12 ">
 
         <p>&nbsp;&nbsp;<img src="/public/logo.png" alt="Logo" height="98" width="122"></p>
 
       </div>
-    </div>
+    </div> -->
 
 
-    <div class="col-xs-12 col-sm-12 col-md-12 ">
-      <div class="container custom-container-width ">
-        <div class="col-xs-12 col-sm-12 col-md-12 bg-success ">
+    <img src="/public/images.jpg" id="bg-img">
+    <div class="container mt-3">
+        <br><br><br>
+      <h1 class="about">About Us :</h1>
+      <div class="media border p-3" style="background-color:burlywood">
+        <img src="/public/logo2.png" alt="關於我們" class="mr-3 mt-3 rounded-circle" style="width:300px">
+        <div class="media-body">
+          <p class="關於我們" style="font-size:1.5vw;">
+            這個網站是為了能讓大家能更進一步的來幫助到原住民，因這些族群特有的文化造就了獨一無二的台灣，若我們在他們需要的時候伸出援手，必能將這些文化保留下來，成為珍貴的寶物。我們將在以下一一介紹我們網站的相關資訊， 也希望有緣看到此網站的朋友們能盡自己所能的來保存我們這珍貴的文化。
+          </p>
         </div>
       </div>
+      <h2 class="理念">Our idea:</h2>
+      <div class="media border p-3" style="background-color:burlywood">
+        <img src="/public/圖片1.jpg" alt="理念" class="mr-3 mt-3 rounded-circle" style="width:300px">
+        <div class="media-body">
+          <p class="理念" style="font-size:1.5vw;">
+            由於山區難行，或是離主要的行政區而言相較偏遠，相比我們，原住民的醫療資源明顯較為缺乏，因此我們希望透過我們的網站，能夠讓更多人注意到原住民在醫療上究竟有甚麼的需求，並且藉由這個網站，作為一個雙方的平台，能夠讓那些願意提供幫助的人，直接的了解到原住民的需求和透過簡易的方式便能提供最直接的幫助。希望能透過此平台，建構雙方的橋樑，使原住民的醫療需求能夠被充分滿足。
+          </p>
+        </div>
+      </div>
+      <h2 class="預期使用者">Except User:</h2>
+      <div class="media border p-3" style="background-color:burlywood">
+        <img src="/public/圖片2.png" alt="預期使用者" class="" style="width:600px">
+        <div class="media-body">
+          <p class="預期使用者" style="font-size:1.5vw;">
+            預期使用者中，我們有著"S、M、V、I這四個分類"。S(supporter)主要代表是提供資源的人、M(medical Personal)代表著醫療人員、V(volunteer)代表著志工或者社工而最後I(indigenous community)則是代表著我們的原住民。
+            透過以上分類我們能快速區分使用者的種類，以便增快處理事情的效率。
+          </p>
+        </div>
+      </div>
+      <h2 class="比較">Compare with:</h2>
+      <div class="media border p-3" style="background-color:burlywood">
+        <img src="/public/3.png" class="" style="width:600px">
+        <div class="media-body">
+          <p class="比較" style="font-size:1.5vw;">
+            相比其他網站，我們多出了許多的功能。我們有著物資平台使我們在第一時間就將最需要的物資交給最需要的人，而醫療幫助則是能減少病患受苦的時間，我們也設有留言互動，廣泛收集各方留言， 加以改進我們的缺點，最後我們的資源也公開透明，捐贈者不用擔心物資被我們獨吞的情況。我們期望能做出一個最便利又快速的資助網站。
+          </p>
+        </div>
+      </div>
+      <div class="top" style="color:dimgray">
+        <a class="backtotop" href="#" onclick="jumphome()">
+          <p style="color:dimgray">回首頁</p>
+        </a>
+      </div>
     </div>
-  </div>
+    <script>
+      $(function () {
+        resize_tab();
+      });
+
+      $(window).resize(function () {
+        resize_tab();
+      }).resize();
+
+      function resize_tab() {
+
+        var viewportWidth = $(window).innerWidth();
+        var viewportHeight = $(window).innerHeight();
+
+        var width = $('#bg-img').width();
+        var height = $('#bg-img').height();
 
 
-  <div class="col-xs-12 col-sm-12 col-md-12 ">
-    <div class="container custom-container-width">
-      <p>
-        測試
-      </p>
-      <br><br><br><br><br><br><br><br><br><br>
-      <br><br><br><br><br><br><br><br><br><br>
-      <br><br><br><br><br><br><br><br><br><br>
-      <br><br><br><br><br><br><br><br><br><br>
-      <br><br><br><br><br><br><br><br><br><br>
-      <br><br><br><br><br><br><br><br><br><br>
-      <br><br><br><br><br><br><br><br><br><br>
-      <br><br><br><br><br><br><br><br><br><br>
-      <br><br><br><br><br><br><br><br><br><br>
-      <br><br><br><br><br><br><br><br><br><br>
+        if ((viewportWidth / viewportHeight) > (width / height)) {
 
-    </div>
-  </div>
+          $('#bg-img').css({
+            'width': '100%',
+            'height': 'auto',
+            'margin-left': 0 - width / 2,
+            'margin-top': 0 - height / 2
+          });
 
 
-
-
+        } else {
+          $('#bg-img').css({
+            'width': 'auto',
+            'height': '100%',
+            'margin-left': 0 - width / 2,
+            'margin-top': 0 - height / 2
+          });
+        }
+      }
+    </script>
 
 </body>
 
